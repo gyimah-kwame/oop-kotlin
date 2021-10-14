@@ -1,15 +1,13 @@
 package advanced_classes
 
-import kotlin.random.Random
-
-class RandomAgent(val agent: String, val probability: Double) : Actor {
+class CleverAgent(val agent: String) : Actor {
 
     override val name: String = agent
 
+    val percept: Percept? = null
 
     override fun act(): Action {
-        val random = Random.nextDouble(0.0, 1.1)
-        return if (probability >= random) ForageAction() else HuntAction("")
+        return if (percept != null) HuntAction(percept.value) else ForageAction()
     }
 
     override fun perceive(vararg facts: Percept) {
@@ -19,5 +17,4 @@ class RandomAgent(val agent: String, val probability: Double) : Actor {
     override fun toString(): String {
         return name
     }
-
 }
