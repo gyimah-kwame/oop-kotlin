@@ -10,16 +10,13 @@ class FoodEnvironment(vararg args: Actor): Environment(*args) {
     }
 
     override fun processAction(agent: Actor, act: Action) {
-        if (act is ForageAction) {
-            var score = scores[agent] ?: 0
-            scores[agent] = ++score
+
+        when(act) {
+            is ForageAction -> {
+                var score = scores[agent] ?: 0
+                scores[agent] = ++score
+            }
         }
-//        when(act) {
-//            is oop.ForageAction -> {
-//                var score = scores[agent] ?: 0
-//                scores[agent] = ++score
-//            }
-//        }
     }
 
     override fun sense(agent: Actor) {

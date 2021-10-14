@@ -1,5 +1,5 @@
 package advanced_classes
 
-abstract class Action {
+sealed class Action {
 
 }
