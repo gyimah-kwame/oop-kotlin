@@ -1,3 +1,5 @@
+package advanced_classes
+
 import kotlin.random.Random
 
 class RandomAgent(val agent: String, val probability: Double) : Actor {

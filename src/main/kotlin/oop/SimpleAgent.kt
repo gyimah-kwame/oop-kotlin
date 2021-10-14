@@ -1,8 +1,10 @@
+package oop
+
 class SimpleAgent(val agent: String) : Actor {
 
     override val name: String = agent
 
-    override fun act(): Action{
+    override fun act(): Action {
         return ForageAction()
     }
 

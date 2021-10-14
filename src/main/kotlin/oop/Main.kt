@@ -1,3 +1,5 @@
+package oop
+
 fun main(args: Array<String>) {
 
     val env = FoodEnvironment(SimpleAgent("Charlie"))

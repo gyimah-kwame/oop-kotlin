@@ -1,4 +1,4 @@
-
+package advanced_classes
 class FoodEnvironment(vararg args: Actor): Environment(*args) {
 
     val scores = mutableMapOf<Actor, Int>()
@@ -15,7 +15,7 @@ class FoodEnvironment(vararg args: Actor): Environment(*args) {
             scores[agent] = ++score
         }
 //        when(act) {
-//            is ForageAction -> {
+//            is oop.ForageAction -> {
 //                var score = scores[agent] ?: 0
 //                scores[agent] = ++score
 //            }

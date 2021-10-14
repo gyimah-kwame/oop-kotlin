@@ -1,3 +1,5 @@
+package advanced_classes
+
 abstract class Environment(vararg ags : Actor) {
     val agents : List<Actor> = ags.toList()
 
